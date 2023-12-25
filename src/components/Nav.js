@@ -6,7 +6,7 @@ import { TbMapSearch } from "react-icons/tb";
 import { PiMapPinLineBold } from "react-icons/pi";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { BiEdit } from "react-icons/bi";
-import { FiUser } from "react-icons/fi";
+import {FiLogIn, FiUser} from "react-icons/fi";
 
 const Nav = () => {
     const { handleMenuClick } = useContext(DataContext);
@@ -17,19 +17,24 @@ const Nav = () => {
             <h2>Ansim</h2>
             <ul>
                 <li className="direction_icon">
-                    <TbMapSearch />
+                    <TbMapSearch/>
                 </li>
                 <li onClick={() => handleMenuClick('안심 시설물')} className="facility_icon">
-                    <Link to="/info" style={{ textDecoration: "none" }}>
-                        <PiMapPinLineBold />
+                    <Link to="/info" style={{textDecoration: "none"}}>
+                        <PiMapPinLineBold/>
                     </Link>
                 </li>
                 <li className="board_icon">
-                    <BiEdit />
+                    <BiEdit/>
                 </li>
                 <li onClick={() => handleMenuClick('마이페이지')} className="mypage_icon">
-                    <Link to="/mypage" style={{ textDecoration: "none" }}>
-                        <FiUser />
+                    <Link to="/mypage" style={{textDecoration: "none"}}>
+                        <FiUser/>
+                    </Link>
+                </li>
+                <li onClick={() => handleMenuClick('로그인')} className="mypage_icon">
+                    <Link to="/Login" style={{textDecoration: "none"}}>
+                        <FiLogIn/>
                     </Link>
                 </li>
             </ul>
